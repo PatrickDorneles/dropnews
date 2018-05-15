@@ -68,3 +68,14 @@
         background:rgba(187,222,251 ,1);
     }
 }
+
+@keyframes fadeInNoticias {
+    from{
+        visibility: hidden;
+        opacity: 0;
+    }
+    to{
+        visibility: visible;
+        opacity: 1;
+    }
+}

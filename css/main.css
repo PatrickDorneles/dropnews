@@ -52,11 +52,6 @@ input[type="radio"] ~ nav header {
     z-index: 5;
 }
 
-input[type="radio"] ~ .noticia-container {
-    visibility: hidden;
-
-}
-
 input[type="radio"] {
     display: none;
 }
@@ -149,7 +144,7 @@ input[type="radio"] ~ nav .navbar .form-group input{
     display: none;
 }
 
-input[type="radio"] ~ nav .navbar .form-group{
+input[type="radio"]:checked ~ nav .navbar .form-group{
     float: right;
     opacity: 0;
     display: flex;
@@ -176,7 +171,7 @@ input[type="radio"]:checked ~ nav .navbar .form-group input[type="text"]{
     border: none;
     height: 30px;
     width: 75px;
-    transition: ease-in-out, width .5s ease-in-out;
+    transition: ease-in-out, .5s ease-in-out;
 }
 
 input[type="radio"]:checked ~ nav .navbar .form-group input[type="text"]::-webkit-input-placeholder{
@@ -184,13 +179,15 @@ input[type="radio"]:checked ~ nav .navbar .form-group input[type="text"]::-webki
 }
 
 input[type="radio"]:checked ~ nav .navbar .form-group input[type="text"]:focus{
-    animation: whiteSearchBar .5s ease-in-out forwards;
+    /*animation: whiteSearchBar .5s ease-in-out forwards;*/
+    background:rgba(187,222,251 ,1);
     width: 250px;
     color: rgba(33,33,33 ,1);
 }
 
 input[type="radio"]:checked ~ nav .navbar .form-group input[type="text"]:focus::-webkit-input-placeholder{
     color: rgba(117,117,117 ,1);
+    transition: ease-in-out, .5s ease-in-out;
 }
 
 input[type="radio"]:checked ~ nav .navbar .form-group input[type="submit"]{
@@ -204,3 +201,22 @@ input[type="radio"]:checked ~ nav .navbar .form-group input[type="submit"]{
     color: white;
 }
 
+input[type="radio"]:checked ~ .noticia-container{
+    
+    animation: fadeInNoticias 1s linear 4s forwards;
+    background: black;
+    height: 100%;
+    width: 100%;
+}
+
+input[type="radio"] ~ .noticia-container {
+    display: flex;
+    transform: scale(0);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.main-noticias {
+    background: black;
+    height: 100%;
+}

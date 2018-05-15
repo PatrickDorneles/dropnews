@@ -1,0 +1,23 @@
+{
+  "name": "dropnews",
+  "version": "1.0.0",
+  "description": "site de noticias usando somente html e css",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./index.html && parcel watch ./index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatrickDorneles/dropnews.git"
+  },
+  "author": "PatrickDorneles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PatrickDorneles/dropnews/issues"
+  },
+  "homepage": "https://github.com/PatrickDorneles/dropnews#readme",
+  "dependencies": {
+    "parcel": "^1.8.1"
+  }
+}

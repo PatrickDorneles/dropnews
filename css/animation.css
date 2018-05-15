@@ -1,0 +1,70 @@
+@keyframes gota {
+      0%{
+        top: 0;
+      }
+
+      25%{
+        border-radius: 50%;
+        border-bottom-right-radius: 10px;
+      }
+      100%{
+        top: -75%;
+        border-radius: 50%;
+        border-bottom-right-radius: 5px;
+        visibility: hidden;
+        display: none;
+      }
+}
+
+@keyframes fadeIn {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+    to{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes subirMare {
+    from {
+        height: 0px;
+        box-shadow: 0;
+    }
+    to{
+        height: 45px;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+    }
+}
+
+@keyframes attention {
+    0% {
+        transform: scale(1.5);
+    }
+
+    25%{
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+    
+    75%{
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes whiteSearchBar {
+    from{
+        background: rgba(21,101,192 ,1);
+    }
+    to{
+        background:rgba(187,222,251 ,1);
+    }
+}

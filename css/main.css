@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    font-family: 'Oswald', sans-serif;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FAFAFA;
+    flex-direction: column;
+}
+
+input[type="radio"] ~ nav{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    top: 0;
+    z-index: 4;
+}
+
+input[type="radio"] ~ nav .navbar {
+    background: rgba(33,150,243 ,1);
+    width: 100vw;
+    height: 0px;
+    top: 0%;
+    padding: 0 10px;
+}
+
+input[type="radio"] ~ nav header {
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    background: rgba(33,150,243 ,1);
+    top: 0;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 0 20px;
+    z-index: 5;
+}
+
+input[type="radio"] ~ .noticia-container {
+    visibility: hidden;
+
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] ~ label {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background: rgba(33,150,243 ,1);
+    border-radius: 50%;
+    position: relative;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+input[type="radio"] ~ label::before{
+    content: "Click Me";
+    display: inline-block;
+    position: absolute;
+    top: 65px;
+    background: rgba(0, 234, 255, 0.3);
+    color: grey;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 2px;
+    animation: attention 2s linear infinite;
+    cursor: default;
+}
+
+input[type="radio"]:checked ~ label::before{
+    visibility: hidden;
+}
+
+input[type="radio"]:checked ~ label {
+    position: absolute;
+    animation: gota 2s ease forwards;
+    cursor: default;
+    position: relative;
+    transform: rotate(45deg);
+}
+
+input[type="radio"]:checked ~ nav .navbar{
+    animation: subirMare 0.5s linear 0.60s forwards;
+}
+
+input[type="radio"] ~ nav .navbar a{
+    display: none;
+}
+
+input[type="radio"]:checked ~ nav .navbar a{
+    float: left;
+    display: flex;
+    height: 100%;
+    padding: 0 20px;
+    /* background: rgba(0, 0, 0, 0.1); */
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    visibility: hidden;
+    opacity: 0;
+    color: white;
+    animation: fadeIn 1s linear 1.3s forwards;
+}
+
+input[type="radio"]:checked ~ nav .navbar a:first-of-type{
+    margin-left:5px;
+}
+
+input[type="radio"]:checked ~ nav .navbar a:hover{
+    background: rgba(0, 0, 0, 0.1);
+}
+
+input[type="radio"] ~ nav header a.home-button {
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0);
+    text-transform: uppercase;
+    text-decoration: none;
+    
+}
+
+input[type="radio"]:checked ~ nav .navbar a:nth-child():after{
+    clear: both;
+}
+
+input[type="radio"] ~ nav .navbar .form-group input{
+    display: none;
+}
+
+input[type="radio"] ~ nav .navbar .form-group{
+    float: right;
+    opacity: 0;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1s linear 2.1s forwards;
+}
+
+input[type="radio"]:checked ~ nav .navbar .form-group input{
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+}
+
+input[type="radio"]:checked ~ nav .navbar .form-group input[type="text"]{
+    background: rgba(21,101,192 ,1);
+    color: white;
+    outline: none;
+    padding: 0 5px;
+    /* box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5); */
+    border-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border: none;
+    height: 30px;
+    width: 75px;
+    transition: ease-in-out, width .5s ease-in-out;
+}
+
+input[type="radio"]:checked ~ nav .navbar .form-group input[type="text"]::-webkit-input-placeholder{
+    color:white;
+}
+
+input[type="radio"]:checked ~ nav .navbar .form-group input[type="text"]:focus{
+    animation: whiteSearchBar .5s ease-in-out forwards;
+    width: 250px;
+    color: rgba(33,33,33 ,1);
+}
+
+input[type="radio"]:checked ~ nav .navbar .form-group input[type="text"]:focus::-webkit-input-placeholder{
+    color: rgba(117,117,117 ,1);
+}
+
+input[type="radio"]:checked ~ nav .navbar .form-group input[type="submit"]{
+    outline: none;
+    background: rgba(13,71,161 ,1);
+    border: none;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    height: 30px;
+    color: white;
+}
+
